@@ -90,7 +90,6 @@ body {
 }
 
 
-
 /*--------------------------------------- header -----------------------------------------------------*/ 
 
 .header {
@@ -103,11 +102,11 @@ body {
     font-weight: 500;
     line-height: var(--first-lh);
     letter-spacing: 0.28px;
+    transition: color var(--time-transform);
 }
 
  .menu-link:hover, .menu-link:focus {
     color: var(--hover-color);
-    transition: var(--time-transform);
  }
 
 .contacts-link {
@@ -118,23 +117,23 @@ body {
     letter-spacing: 0.28px;
     display: flex;
     align-items: center;
+    transition: color var(--time-transform);
 }
 
 .heder-icon {
     margin-right: 10px;
     fill: currentColor;
+    transition: color var(--time-transform), fill var(--time-transform);
 }
 
  .contacts-link:hover, .contacts-link:focus {
     color: var(--hover-color);
-    transition: var(--time-transform);
  }
 
  .contacts-link:hover .heder-icon,
  .contacts-link:focus .heder-icon {
      color: var(--hover-color);
      fill: var(--hover-color);
-    transition: var(--time-transform);
  }
 
  .header-menu .menu-item .menu-link.current {
@@ -226,13 +225,13 @@ body {
     cursor: pointer;
     min-width: 200px;
     min-height: 50px;
+    transition: background-color var(--time-transform), color var(--time-transform), min-width var(--time-transform);
  }
 
  .hero-button:hover, .hero-button:focus {
     background-color: #188CE8;
     color: var(--main-color);
     min-width: 216px;
-    transition: var(--time-transform);
  }
 
 
@@ -385,21 +384,21 @@ body {
     align-items: center;
     justify-content: center;
     fill: var(--icon-color);
+    transition: background-color var(--time-transform);
 }
 
 .team-soc-icon {
     width: 20px;
     height: 20px;
+    transition: fill var(--time-transform);
 }
 
 .team-soc-link:hover, .team-soc-link:focus {
   background-color: var(--hover-color);
-    transition: var(--time-transform);
 }
 
 .team-soc-link:hover .team-soc-icon, .team-soc-link:focus .team-soc-icon {
     fill: var(--main-color);
-    transition: var(--time-transform);
 }
 
 /*--------------------------------------- regular-customers -----------------------------------------------------*/
@@ -432,19 +431,22 @@ body {
     justify-content: center;
     fill: var(--icon-color);
     outline: none;
+    transition: border-color var(--time-transform);
 }
 
 
 .regular-customers-link:hover, .regular-customers-link:focus {
     border-color: var(--hover-color);
-    transition: var(--time-transform);
+}
+
+.regular-customer-icon {
+    transition: fill var(--time-transform), border-color var(--time-transform);
 }
 
 .regular-customers-link:hover .regular-customer-icon,
 .regular-customers-link:focus .regular-customer-icon {
     fill: var(--hover-color);
     border-color: var(--hover-color);
-    transition: var(--time-transform);
 }
 
 /*--------------------------------------- footer -----------------------------------------------------*/
@@ -516,6 +518,7 @@ body {
     justify-content: center;
     fill: var(--main-color);
     background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color var(--time-transform);
 
 }
 
@@ -526,7 +529,6 @@ body {
 
 .footer-soc-link:hover, .footer-soc-link:focus {
     background-color: var(--hover-color);
-    transition: var(--time-transform);
 }
 
 .footer-wrap {
@@ -545,7 +547,7 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     top: 0;
-    transition: opacity 350ms linear, visibility 350ms linear;
+    transition: opacity 250ms linear, visibility 250ms linear;
 }
 
 .modal {
@@ -592,7 +594,7 @@ body {
 }
 
 .is-hidden {
-    visibility: none;
+    visibility: hidden;
     opacity: 0;
     pointer-events: none;
 }
@@ -625,6 +627,7 @@ body {
     cursor: pointer;
     padding: 6px 22px 6px 22px;
     border: 0px;
+    transition: background-color var(--time-transform), color var(--time-transform), box-shadow var(--time-transform);
 
 }
 
@@ -632,7 +635,6 @@ body {
     background-color: var(--hover-color);
     color: var(--main-color);
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 3px 1px 0 rgba(0, 0, 0, 0.1);
-    transition: var(--time-transform);
 }
 
 .portfolio-item-title {
@@ -661,12 +663,12 @@ body {
 
 .portfolio-item {
     width: 370px;
+    transition: box-shadow var(--time-transform);
 }
 
 .portfolio-item:hover .portfolio-cover-text,
 .portfolio-item:focus .portfolio-cover-text {
     transform: translate(0);
-    transition: var(--time-transform);
 }
 
 .portfolio-cover-wrap{
@@ -684,6 +686,7 @@ body {
     padding: 63px 24px 63px 24px;
     background-color: rgba(33, 150, 243, 0.9);
     transform: translateY(100%);
+    transition: transform var(--time-transform);
 }
 
 .portfolio-link {
@@ -692,7 +695,6 @@ body {
 
 .portfolio-item:hover, .portfolio-item:focus {
     box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-    transition: var(--time-transform);
 }
 
 .portfolio-card-container {
