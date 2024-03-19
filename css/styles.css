@@ -663,7 +663,6 @@ body {
 
 .portfolio-item {
     width: 370px;
-    transition: box-shadow var(--time-transform);
 }
 
 .portfolio-item:hover .portfolio-cover-text,
@@ -691,9 +690,10 @@ body {
 
 .portfolio-link {
     display: block;
+    transition: box-shadow var(--time-transform);
 }
 
-.portfolio-item:hover, .portfolio-item:focus {
+.portfolio-link:hover, .portfolio-link:focus {
     box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 }
 
